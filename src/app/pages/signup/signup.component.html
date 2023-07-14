@@ -1,0 +1,46 @@
+<div class = "bootstrap-wrapper">
+  <div class = "container">
+    <div class="row" style="margin-top : 20px;">
+      <div class = "col-md-6 offset-md-3">
+        <div class="container text-center">
+          <img src="../assets/imagenes/agregar-usuario.png" width="100" height="100">
+        </div>
+        <h1 class="text-center">Registrate aqui</h1>
+          <form (ngSubmit)="formSubmit()" #form="ngForm">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Nombre de usuario</mat-label>
+              <input required matInput [(ngModel)]="user.username" name="username" placeholder="Ingrese su nombre de usuario">
+              <mat-hint>El nombre de usuario debe ser único.</mat-hint>
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>password</mat-label>
+              <input required matInput [type]="hide ? 'password' : 'text'" name = "password"[(ngModel)]="user.password"  placeholder="Ingrese su contraseña">
+            </mat-form-field>
+            <mat-form-field class="full-width"  appearance="outline">
+              <mat-label>Nombre</mat-label>
+              <input required matInput [(ngModel)]="user.nombre" name="nombre" placeholder="Ingrese su nombre">
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Apellido</mat-label>
+              <input required matInput [(ngModel)]="user.apellido" name="apellido" placeholder="Ingrese su apellido">
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>email</mat-label>
+              <input required matInput [(ngModel)]="user.email" name="email" placeholder="Ingrese su email">
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Telefono</mat-label>
+              <input required matInput [(ngModel)]="user.telefono" name="telefono" placeholder="Ingrese su telefono">
+            </mat-form-field>
+            <div class="container text-center">
+              <button mat-raised-button color="primary">Registrar</button>
+              <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Limpiar</button>
+            </div>
+          </form>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
